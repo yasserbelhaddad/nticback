@@ -11,11 +11,11 @@ class Timing extends Model
 
     protected $table = 'timings';
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'roomtiming';
 
-    protected $fillable = ['StartTime','EndTime'];
+    protected $fillable = ['starttime','endtime','roomtiming'];
 
-    public function Reservation()
+    public function reservation()
     {
         return $this->hasMany(Reservation::class);
     }

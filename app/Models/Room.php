@@ -13,9 +13,9 @@ class Room extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['Capacity','Floor','RoomType'];
+    protected $fillable = ['capacity','floor','roomname'];
 
-    public function Reservation()
+    public function reservation()
     {
         return $this->hasMany(Reservation::class);
     }

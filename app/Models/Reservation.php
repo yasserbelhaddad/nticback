@@ -13,7 +13,7 @@ class Reservation extends Model
 
     protected $primaryKey = 'id';
 
-    public $fillable = ['ReservationDate' , 'Teacher_id' , 'Timing_id' , 'Room_id'];
+    public $fillable = ['reservationdate' , 'teacher_email' , 'roomtiming' , 'room_id' , 'email' , 'material_id'];
 
     public function teacher()
     {
@@ -32,7 +32,7 @@ class Reservation extends Model
 
     public function material()
     {
-        return $this->hasMany(Material::class);
+        return $this->belongsTo(Material::class);
     }
 
 }

@@ -15,10 +15,10 @@ class CreatePrsnadministrativesTable extends Migration
     {
         Schema::create('prsnadministratives', function (Blueprint $table) {
             $table->id();
-            $table->string('FirstName');
-            $table->string('LastName');
-            $table->string('Email')->unique();
-            $table->string('Password');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email')->unique();
+            $table->string('password');
             $table->timestamps();
         });
     }

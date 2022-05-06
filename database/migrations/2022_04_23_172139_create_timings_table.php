@@ -14,16 +14,18 @@ class CreateTimingsTable extends Migration
     public function up()
     {
         Schema::create('timings', function (Blueprint $table) {
-            $table->id();
-            $table->time('StartTime');
-            $table->time('EndTime');
+            $table->integer('roomtiming');
+            $table->time('starttime');
+            $table->time('endtime');
             $table->timestamps();
+            $table->primary('roomtiming');
         });
     }
 
     /**
      * Reverse the migrations.
      *
+     * 
      * @return void
      */
     public function down()

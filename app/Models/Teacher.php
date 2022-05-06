@@ -11,11 +11,11 @@ class Teacher extends Model
 
     protected $table = 'teachers';
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'email';
 
-    protected $fillable = ['FirstName','LastName','Email','PhoneNumber','Department','Grade','Status','State','Password'];
+    protected $fillable = ['firstname','lastname','email','phonenumber','department','grade','status','state','password'];
 
-    public function Reservation()
+    public function reservation()
     {
         return $this->hasMany(Reservation::class);
     }

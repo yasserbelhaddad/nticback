@@ -14,15 +14,15 @@ class CreateReservationsTable extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
-            $table->date('ReservationDate');
-            $table->unsignedBigInteger('Teacher_id');
-            $table->unsignedBigInteger('Timing_id');
-            $table->unsignedBigInteger('Room_id');
+            $table->bigIncrements('id');
+            $table->date('reservationdate');
+            $table->unsignedBigInteger('material_id')->nullable();
+            $table->string('teacher_email');
+            $table->foreign('teacher_email')->references('email')->on('teachers')->onDelete('cascade');
+            $table->integer('roomtiming');
+            $table->unsignedBigInteger('room_id');
+            $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');
             $table->timestamps();
-            $table->foreign('Teacher_id')->references('id')->on('teachers')->onDelete('cascade');
-            $table->foreign('Timing_id')->references('id')->on('timings')->onDelete('cascade');
-            $table->foreign('Room_id')->references('id')->on('rooms')->onDelete('cascade');
         });
     }
 

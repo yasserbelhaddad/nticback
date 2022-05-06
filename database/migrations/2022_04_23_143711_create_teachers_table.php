@@ -14,17 +14,17 @@ class CreateTeachersTable extends Migration
     public function up()
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->id();
-            $table->string('FirstName');
-            $table->string('LastName');
-            $table->string('Email')->unique();
-            $table->string('PhoneNumber');
-            $table->string('Department');
-            $table->string('Grade');
-            $table->set('Status', ['active', 'desactive']);
-            $table->set('State', ['principale', 'secondary']);
-            $table->string('Password');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email')->unique();
+            $table->string('phonenumber');
+            $table->string('department');
+            $table->string('grade');
+            $table->set('status', ['active', 'desactive']);
+            $table->set('state', ['principale', 'secondary']);
+            $table->string('password');
             $table->timestamps();
+            $table->primary('email');
         });
     }
 

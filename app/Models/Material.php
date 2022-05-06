@@ -13,7 +13,7 @@ class Material extends Model
 
     protected $primaryKey = 'id';
 
-    public $fillable = ['State' , 'SerialNumber' , 'Property' , 'TypeMaterial' , 'Reservation_id'];
+    public $fillable = ['state' , 'serialnumber' , 'property' , 'typematerial'];
 
     public function reservation()
     {

@@ -13,5 +13,5 @@ class Administrator extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['FirstName','LastName','Email','Password'];
+    protected $fillable = ['firstname','lastname','email','password'];
 }

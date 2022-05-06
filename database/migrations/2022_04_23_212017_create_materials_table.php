@@ -14,13 +14,11 @@ class CreateMaterialsTable extends Migration
     public function up()
     {
         Schema::create('materials', function (Blueprint $table) {
-            $table->id();
-            $table->string('State');
-            $table->string('SerialNumber');
-            $table->string('Property');
-            $table->string('TypeMaterial');
-            $table->unsignedBigInteger('Reservation_id');
-            $table->foreign('Reservation_id')->references('id')->on('reservations')->onDelete('cascade');
+            $table->bigIncrements('id');
+            $table->string('state');
+            $table->string('serialnumber');
+            $table->string('property');
+            $table->string('typematerial');
             $table->timestamps();
         });
     }
