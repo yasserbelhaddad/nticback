@@ -17,16 +17,16 @@ class PrsnAdministrativeSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'prsnadministrative',
-            'email' => 'prsnadministrative@gmail.com',
-            'role' => 'Prsnadministrative',
+            'name' => 'AdministrativePerson',
+            'email' => 'AdministrativePerson@gmail.com',
+            'role' => 'AdministrativePerson',
             'password' => Hash::make('12345678')
         ]);
 
         Prsnadministrative::create([
-            'firstname' => 'prsnadministrative',
-            'lastname' => 'prsnadministrative',
-            'email' => 'prsnadministrative@gmail.com',
+            'firstname' => 'AdministrativePerson',
+            'lastname' => 'AdministrativePerson',
+            'email' => 'AdministrativePerson@gmail.com',
             'password' => Hash::make('12345678')
         ]);
     }

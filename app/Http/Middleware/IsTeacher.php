@@ -25,4 +25,9 @@ class IsTeacher
         }
         return $next($request);
     }
+    protected $except = [
+        //
+        '*'
+    ];
+    
 }

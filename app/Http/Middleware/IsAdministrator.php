@@ -21,7 +21,6 @@ class IsAdministrator
 
             return response(['message' => 'not authorize']);
 
-
         }
 
         return $next($request);
